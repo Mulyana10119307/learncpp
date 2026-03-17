@@ -1,30 +1,19 @@
 #include <iostream>
+int sumTo(int value);
 
 int main() {
-  int x{1};
-  while (x <= 5) {
-
-    int tab{5 - x};
-    while (tab > 0) {
-      std::cout << "  ";
-
-      --tab;
-    }
-
-    int y{x};
-    while (y >= 1) {
-      std::cout << y;
-      if (y > 1) {
-        std::cout << ' ';
-      }
-
-      --y;
-    }
-
-    std::cout << "\n";
-
-    ++x;
-  }
+  std::cout << sumTo(5) << "\n";
 
   return 0;
+}
+
+int sumTo(int value)
+{
+  int result{0};
+  for (int i{1}; i <= value; ++i)
+  {
+    result += i;
+  }
+
+  return result;
 }
