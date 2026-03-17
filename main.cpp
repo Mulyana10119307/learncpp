@@ -1,13 +1,23 @@
 #include <iostream>
 
 int main() {
-  std::cout << "ASCII code  | letter\n";
+  int x{5};
+  while (x >= 1) {
 
-  char letter{'a'};
-  while (letter <= 'z') {
-    std::cout << static_cast<int>(letter) << "  | " << letter << "\n";
+    int y{x};
+    while (y >= 1) {
 
-    ++letter;
+      std::cout << y;
+      if (y > 1) {
+        std::cout << ' ';
+      }
+
+      --y;
+    }
+
+    std::cout << "\n";
+
+    --x;
   }
 
   return 0;
