@@ -3,30 +3,30 @@
 void fizzbuzz(int count);
 
 int main() {
-  fizzbuzz(15);
+  fizzbuzz(150);
 
   return 0;
 }
 
-void fizzbuzz(int count)
-{
-  for (int i{1}; i <= count; ++i)
-  {
-    if (i % 3 == 0 && i % 5 == 0)
-    {
-       std::cout << "fizzbuzz\n";
+void fizzbuzz(int count) {
+  for (int i{1}; i <= count; ++i) {
+    bool printed{false};
+    if (i % 3 == 0) {
+      std::cout << "fizz";
+      printed = true;
     }
-       else if (i % 3 == 0)
-    {
-       std::cout << "fizz\n";
+    if (i % 5 == 0) {
+      std::cout << "buzz";
+      printed = true;
     }
-       else if (i % 5 == 0)
-    {
-       std::cout << "buzz\n";
+    if (i % 7 == 0) {
+      std::cout << "pop";
+      printed = true;
     }
-       else
-    {
-       std::cout << i << "\n";
+    if (!printed) {
+      std::cout << i;
     }
+
+    std::cout << "\n";
   }
 }
